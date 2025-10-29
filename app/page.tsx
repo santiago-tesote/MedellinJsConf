@@ -25,6 +25,7 @@ export default function Home() {
             (Sí, esto se hizo en una noche... el café fue esencial ☕)
           </p>
         </div>
+        
 
         {/* Conceptos Principales */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
