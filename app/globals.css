@@ -14,13 +14,95 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #171717;
   }
 }
 
 body {
-  background: var(--background);
+  background: #fafafa;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  /* Textura tipo papel premium con ruido y patrones sutiles */
+  background-image: 
+    /* Ruido fino */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E"),
+    /* Patrón de puntos muy sutil */
+    radial-gradient(circle at 50% 50%, rgba(0,0,0,0.02) 1px, transparent 1px),
+    /* Gradientes suaves para profundidad */
+    radial-gradient(ellipse at top left, rgba(168, 85, 247, 0.03), transparent 50%),
+    radial-gradient(ellipse at top right, rgba(99, 102, 241, 0.03), transparent 50%),
+    radial-gradient(ellipse at bottom left, rgba(59, 130, 246, 0.03), transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(236, 72, 153, 0.03), transparent 50%);
+  background-size: 
+    300px 300px,
+    20px 20px,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%;
+  background-position: 
+    0 0,
+    0 0,
+    top left,
+    top right,
+    bottom left,
+    bottom right;
+  background-attachment: fixed;
+}
+
+/* Utilidades elegantes */
+.card-elegant {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 
+    0 1px 2px 0 rgba(0, 0, 0, 0.04),
+    0 2px 6px 0 rgba(0, 0, 0, 0.04),
+    0 8px 14px 0 rgba(0, 0, 0, 0.04),
+    0 12px 24px 0 rgba(0, 0, 0, 0.05),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.card-elegant:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 
+    0 4px 8px 0 rgba(0, 0, 0, 0.06),
+    0 8px 20px 0 rgba(0, 0, 0, 0.06),
+    0 16px 32px 0 rgba(0, 0, 0, 0.07),
+    0 24px 48px 0 rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+}
+
+/* Efecto de profundidad en headers */
+h1, h2, h3 {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animaciones suaves */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
 }
