@@ -29,7 +29,7 @@ export default function Home() {
         {/* Conceptos Principales */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            📚 Lo Básico (sin rollos técnicos)
+          Lo Básico de React Server Components
           </h2>
           
           <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -72,9 +72,11 @@ export default function Home() {
 
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
             <p className="text-sm text-gray-800">
-              <strong>💡 Plot twist:</strong> RSC ≠ SSR (sí, son diferentes). 
-              Con SSR mandas HTML + todo el React. Con RSC solo mandas el resultado.
-              Es la diferencia entre enviar la receta vs enviar el plato hecho 🍝
+              <strong>💡 Plot twist: React Server Components (RSC) no son lo mismo que Server-Side Rendering (SSR).
+                Aunque suenen parecidos, funcionan de forma muy distinta.
+                Con SSR, el servidor envía HTML junto con todo el código de React al cliente.
+                En cambio, con RSC, el servidor solo envía el resultado final ya procesado, no el código que lo genera. 
+              </strong>
             </p>
           </div>
         </div>
@@ -82,7 +84,7 @@ export default function Home() {
         {/* Ejemplos Interactivos */}
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            🎯 Ejemplos Interactivos
+            Ejemplos de Client-Side Rendering (CSR), Server-Side Rendering (SSR) y React Server Components (RSC)
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -193,11 +195,11 @@ export default function Home() {
         {/* Footer */}
         <div className="mt-12 text-center text-gray-600">
           <p className="mb-2">
-            💻 Hecho con café y buenas vibras para MedellinJS 2025
+            Hecho por Santiago Garcia para MedellinJS 2025
           </p>
           <p className="text-sm">
             Pro tip: Presiona <kbd className="px-2 py-1 bg-gray-200 rounded text-xs">Ctrl+U</kbd> en cada página 
-            para ver la magia (o la falta de ella) en el HTML
+            para ver el código fuente y entender mejor el funcionamiento de cada ejemplo.
           </p>
         </div>
       </div>
